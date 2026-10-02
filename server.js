@@ -296,8 +296,12 @@ app.use((err, req, res, next) => {
 // ===========================================
 // Start server
 // ===========================================
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-  console.log(`📋 Business: ${process.env.BUSINESS_NAME || 'Not configured'}`);
-  console.log(`📍 Service Areas: ${process.env.SERVICE_AREAS || 'Not configured'}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`✅ Server running at http://localhost:${PORT}`);
+    console.log(`📋 Business: ${process.env.BUSINESS_NAME || 'Not configured'}`);
+    console.log(`📍 Service Areas: ${process.env.SERVICE_AREAS || 'Not configured'}`);
+  });
+}
+
+module.exports = app;
