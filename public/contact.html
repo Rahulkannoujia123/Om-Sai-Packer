@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact our professional moving company. Request a quote or get in touch with us via phone, email or WhatsApp.">
+    <title>Contact Us - [Business Name] | Get in Touch</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="/contact.html">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="/" data-config="business-name" aria-label="Home">Professional Movers & Packers</a>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-links">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:" class="nav-phone" data-config="business-phone">📞 Phone</a>
+                <a href="#contact-form" class="btn btn-primary cta-btn">Get Free Quote</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-container bg-light" style="padding: 15px 0;">
+        <div class="container">
+            <ul class="breadcrumb" style="list-style: none; display: flex; gap: 10px; margin: 0; padding: 0;">
+                <li><a href="/">Home</a></li>
+                <li>&gt;</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 60px 0; text-align: center; background: #f8f9fa;">
+            <div class="container">
+                <h1 style="margin-bottom: 20px;">Contact Us</h1>
+                <p class="lead-text">We'd love to hear from you! Reach out for quotes or support.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="contact-wrapper" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;">
+                    
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <ul class="contact-list" style="margin-top: 20px; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px;"><strong>📞 Phone:</strong> <a href="tel:" data-config="business-phone"></a></li>
+                            <li style="margin-bottom: 15px;"><strong>💬 WhatsApp:</strong> <a href="#" data-config="whatsapp-link" target="_blank" rel="noopener noreferrer">Message Us</a></li>
+                            <li style="margin-bottom: 15px;"><strong>✉️ Email:</strong> <a href="mailto:" data-config="business-email"></a></li>
+                            <li style="margin-bottom: 15px;"><strong>📍 Address:</strong> <span data-config="business-address"></span></li>
+                            <li style="margin-bottom: 15px;"><strong>🕒 Working Hours:</strong> Mon-Sat, 8 AM - 9 PM | Sunday: 9 AM - 6 PM</li>
+                        </ul>
+                        
+                        <div style="margin-top: 20px;">
+                            <strong>Follow Us:</strong>
+                            <div class="social-links" style="margin-top: 10px;">
+                                <a href="#" data-config="social-fb" style="margin-right: 10px;">Facebook</a>
+                                <a href="#" data-config="social-tw" style="margin-right: 10px;">Twitter</a>
+                                <a href="#" data-config="social-ig">Instagram</a>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container" style="margin-top: 30px;">
+                            <iframe 
+                                src="about:blank" 
+                                data-config="map-url"
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Google Maps Location">
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-form" id="contact-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <form action="/api/quote" method="POST" id="main-quote-form">
+                            <h2>Get Your Free Moving Quote</h2>
+                            
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobileNumber">Mobile Number *</label>
+                                <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group half-width">
+                                    <label for="pickupCity">Pickup City *</label>
+                                    <input type="text" id="pickupCity" name="pickupCity" required aria-required="true">
+                                </div>
+                                <div class="form-group half-width">
+                                    <label for="dropCity">Drop City *</label>
+                                    <input type="text" id="dropCity" name="dropCity" required aria-required="true">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pickupAddress">Pickup Address</label>
+                                <textarea id="pickupAddress" name="pickupAddress" rows="2"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dropAddress">Drop Address</label>
+                                <textarea id="dropAddress" name="dropAddress" rows="2"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="movingDate">Moving Date</label>
+                                <input type="date" id="movingDate" name="movingDate" min="">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group half-width">
+                                    <label for="propertyType">Property Type</label>
+                                    <select id="propertyType" name="propertyType">
+                                        <option value="">Select Property Type</option>
+                                        <option value="House">House</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Office">Office</option>
+                                        <option value="Shop">Shop</option>
+                                        <option value="Warehouse">Warehouse</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group half-width">
+                                    <label for="numRooms">Size/Volume</label>
+                                    <select id="numRooms" name="numRooms">
+                                        <option value="">Select Size</option>
+                                        <option value="1 BHK">1 BHK</option>
+                                        <option value="2 BHK">2 BHK</option>
+                                        <option value="3 BHK">3 BHK</option>
+                                        <option value="4 BHK">4 BHK</option>
+                                        <option value="5+ BHK">5+ BHK</option>
+                                        <option value="Office Space">Office Space</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vehicleType">Preferred Vehicle</label>
+                                <select id="vehicleType" name="vehicleType">
+                                    <option value="Not Sure">Not Sure</option>
+                                    <option value="Shared Truck">Shared Truck (Part Load)</option>
+                                    <option value="Dedicated Truck">Dedicated Truck (Full Load)</option>
+                                    <option value="Mini Truck">Mini Truck</option>
+                                    <option value="Container">Container</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="additionalReq">Additional Requirements / Message</label>
+                                <textarea id="additionalReq" name="additionalReq" rows="2" placeholder="Tell us more about your move..."></textarea>
+                            </div>
+
+                            <!-- Honeypot -->
+                            <div style="display: none;">
+                                <label for="website_url">Leave this field blank</label>
+                                <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Submit Quote Request</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-config="business-name">Professional Movers</h3>
+                    <p>Providing safe, reliable, and affordable packing and moving services across India.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms & Conditions</a></li>
+                        <li><a href="/cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="/refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> <span data-config="business-name">Professional Movers</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-actions">
+        <a href="tel:" class="float-btn call-btn" data-config="business-phone-link">📞</a>
+        <a href="https://wa.me/" class="float-btn whatsapp-btn" data-config="whatsapp-link" target="_blank">💬</a>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div class="modal-body text-center">
+                <div class="success-icon">✅</div>
+                <h2>Request Submitted!</h2>
+                <p>We'll contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="float-btn" style="position: fixed; bottom: 20px; left: 20px; display: none; z-index: 99; border-radius: 50%; width: 50px; height: 50px; border: none; background: #0056b3; color: white; cursor: pointer; font-size: 20px;">↑</button>
+
+    <script src="/js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const today = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('movingDate');
+        if (dateInput) {
+            dateInput.setAttribute('min', today);
+        }
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) btn.style.display = 'block';
+            else btn.style.display = 'none';
+        });
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

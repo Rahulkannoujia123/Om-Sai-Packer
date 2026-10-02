@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top-rated movers and packers in {{CITY_NAME}}. Professional home, office, and vehicle relocation services.">
+    <title>Movers & Packers in {{CITY_NAME}} | Professional Moving Services</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="/locations/{{CITY_SLUG}}.html">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="/" data-config="business-name" aria-label="Home">Professional Movers & Packers</a>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-links">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:" class="nav-phone" data-config="business-phone">📞 Phone</a>
+                <a href="#quote-section" class="btn btn-primary cta-btn">Get Free Quote</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-container bg-light" style="padding: 15px 0;">
+        <div class="container">
+            <ul class="breadcrumb" style="list-style: none; display: flex; gap: 10px; margin: 0; padding: 0;">
+                <li><a href="/">Home</a></li>
+                <li>&gt;</li>
+                <li>Locations</li>
+                <li>&gt;</li>
+                <li>{{CITY_NAME}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" style="padding: 80px 0; background: #f8f9fa;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <h1 style="margin-bottom: 20px; font-size: 2.5rem;">Best Movers & Packers in {{CITY_NAME}}</h1>
+                    <p class="lead-text" style="margin-bottom: 20px;">Reliable and professional relocation services tailored for {{CITY_NAME}} residents and businesses. We make moving stress-free!</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-weight: 500;">
+                        <li style="margin-bottom: 10px;">✅ Local & Domestic Shifting</li>
+                        <li style="margin-bottom: 10px;">✅ Safe Packing & Handling</li>
+                        <li style="margin-bottom: 10px;">✅ Transparent Pricing</li>
+                    </ul>
+                    <a href="#quote-section" class="btn btn-primary cta-large">Request a Quote</a>
+                </div>
+                <!-- Mini Quote Form for Location Page -->
+                <div id="quote-section" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 20px;">Get a Quote in {{CITY_NAME}}</h3>
+                    <form action="/api/quote" method="POST">
+                        <input type="hidden" name="pickupCity" value="{{CITY_NAME}}">
+                        <div class="form-group">
+                            <input type="text" name="fullName" placeholder="Full Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="mobileNumber" placeholder="Mobile Number" required pattern="[0-9]{10}" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="dropCity" placeholder="Destination City" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                    <h2>Moving Services in {{CITY_NAME}}</h2>
+                    <p>Relocating within or out of {{CITY_NAME}}? Our dedicated team understands the local logistics, traffic patterns, and community regulations of {{CITY_NAME}} to execute a flawless move.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🏠 Home Shifting</h3>
+                            <p>Complete household packing and moving services in {{CITY_NAME}}.</p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🏢 Office Relocation</h3>
+                            <p>Swift corporate shifting with minimal downtime.</p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🚗 Vehicle Transport</h3>
+                            <p>Safe car and bike transportation from {{CITY_NAME}}.</p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">📦 Packing Services</h3>
+                            <p>High-quality packing material and expert handlers.</p>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-top: 50px;">Popular Areas We Serve in {{CITY_NAME}}</h2>
+                    <p>We provide extensive coverage across all major localities in {{CITY_NAME}}. Our local presence ensures quick survey and prompt service.</p>
+                    <!-- Server can inject specific localities here, or we leave a generic descriptive placeholder -->
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 20px; list-style: none; padding: 0;">
+                        <li>📍 Central {{CITY_NAME}}</li>
+                        <li>📍 North {{CITY_NAME}}</li>
+                        <li>📍 South {{CITY_NAME}}</li>
+                        <li>📍 East {{CITY_NAME}}</li>
+                        <li>📍 West {{CITY_NAME}}</li>
+                        <li>📍 Suburbs</li>
+                    </ul>
+
+                    <h2 style="margin-top: 50px;">Why Choose Us in {{CITY_NAME}}?</h2>
+                    <p>Choosing the right packer and mover in {{CITY_NAME}} makes all the difference. We bring years of experience, a verified professional team, and a commitment to safe, on-time delivery. We offer transparent pricing with absolutely no hidden charges.</p>
+                    
+                    <h2 style="margin-top: 50px;">Frequently Asked Questions ({{CITY_NAME}})</h2>
+                    <div style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">Q: How much does shifting cost within {{CITY_NAME}}?</h4>
+                        <p style="margin-bottom: 20px;">A: Local shifting costs depend on the volume of goods, distance between locations, and floor levels. Contact us for a precise, free estimate.</p>
+                        
+                        <h4 style="margin-bottom: 10px;">Q: Do you offer pre-move surveys in {{CITY_NAME}}?</h4>
+                        <p style="margin-bottom: 20px;">A: Yes, we provide free physical or video surveys across all localities in {{CITY_NAME}} to give you an accurate quotation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-config="business-name">Professional Movers</h3>
+                    <p>Providing safe, reliable, and affordable packing and moving services in {{CITY_NAME}} and across India.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms & Conditions</a></li>
+                        <li><a href="/cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="/refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> <span data-config="business-name">Professional Movers</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-actions">
+        <a href="tel:" class="float-btn call-btn" data-config="business-phone-link">📞</a>
+        <a href="https://wa.me/" class="float-btn whatsapp-btn" data-config="whatsapp-link" target="_blank">💬</a>
+    </div>
+
+    <button id="back-to-top" class="float-btn" style="position: fixed; bottom: 20px; left: 20px; display: none; z-index: 99; border-radius: 50%; width: 50px; height: 50px; border: none; background: #0056b3; color: white; cursor: pointer; font-size: 20px;">↑</button>
+
+    <script src="/js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) btn.style.display = 'block';
+            else btn.style.display = 'none';
+        });
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
