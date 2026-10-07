@@ -57,6 +57,7 @@ const faqs = [
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({
     name: '',
     mobile: '',
@@ -88,14 +89,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <nav className="main-nav" aria-label="Main navigation">
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#why-us">Why us</a>
-            <a href="#faq">FAQ</a>
-            <a href="#booking">Book now</a>
+          <nav id="main-navigation" className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
+            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#why-us" onClick={() => setMenuOpen(false)}>Why us</a>
+            <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
+            <a href="#booking" onClick={() => setMenuOpen(false)}>Book now</a>
           </nav>
 
+          <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen((open) => !open)}><span></span><span></span><span></span></button>
           <div className="nav-actions">
             <a className="ghost-link" href="tel:+917738684221">Call Now</a>
             <a className="primary-link" href="#booking">Get Quote</a>
