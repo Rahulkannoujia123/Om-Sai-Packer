@@ -74,7 +74,17 @@ export default function HomePage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert('Thanks! Your quote request has been received. Our team will contact you soon.');
+    const message = [
+      'Namaste, mujhe shifting ka quote chahiye.',
+      'Name: ' + form.name,
+      'Mobile: ' + form.mobile,
+      'Pickup city: ' + form.pickupCity,
+      'Drop city: ' + form.dropCity,
+      'Moving date: ' + (form.movingDate || 'Not decided'),
+      'Moving type: ' + (form.requirement || 'Not selected'),
+    ].join('\\n');
+    const whatsappUrl = 'https://wa.me/917738684221?text=' + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
